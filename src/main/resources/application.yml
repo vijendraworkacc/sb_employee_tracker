@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: employee-tracker
+    version: 1.0.0
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_tracker?createDatabaseIfNotExist=true
+    username: root          # or your MySQL user
+    password: root@1234 # add your actual MySQL password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create   # options: create | update | validate | none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    open-in-view: false
+
+
